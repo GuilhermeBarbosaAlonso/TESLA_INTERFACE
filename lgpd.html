@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PULSO EV - Segurança e LGPD</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <a class="visually-hidden-focusable bg-white p-2" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="bg-white border-bottom sticky-top">
+    <div class="container-fluid px-4 py-2 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div class="navbar-brand d-flex align-items-center fs-4 m-0">
+        <span>PULSO</span><span class="badge-ev">EV</span>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Visão Geral</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="graficos.html">Gráficos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="storytelling.html">Storytelling</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="lgpd.html" aria-current="page">Segurança e LGPD</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container-fluid px-4 py-4 flex-grow-1" tabindex="-1" style="scroll-margin-top: 160px;">
+
+        <div class="mb-4">
+          <div class="page-subtitle">MOBILIDADE ELÉTRICA / WASHINGTON · ANOS DE MODELO 2010–2025</div>
+          <h1 class="fw-bold h2 mb-1">Segurança e LGPD</h1>
+          <p class="text-muted small">Cuidados com os dados utilizados no projeto e recomendações para sua publicação.</p>
+          <div class="small text-secondary"><strong>04</strong> / GOVERNANÇA DOS DADOS</div>
+        </div>
+
+        <div class="alert alert-light border mb-4">
+          <div class="fw-bold">Dados agregados, sem identificação de proprietários</div>
+          <div class="small text-muted">Esta interface apresenta resultados agregados e não expõe nomes de proprietários, coordenadas ou identificadores individuais. A agregação reduz a exposição, mas não garante, por si só, a impossibilidade de reidentificação.</div>
+        </div>
+
+        <h2 class="h4 fw-bold mb-3">Princípios que orientam a análise</h2>
+        <p class="small text-muted">Finalidade, adequação e necessidade são princípios da LGPD utilizados aqui como referência acadêmica. A base analisada é do estado de Washington, nos Estados Unidos. Esta página não determina a aplicação da lei brasileira ao caso nem certifica conformidade jurídica.</p>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="custom-card h-100">
+              <i class="bi bi-bullseye fs-3 text-secondary mb-2 d-block" aria-hidden="true"></i>
+              <h3 class="h5 fw-bold">Finalidade</h3>
+              <p class="text-muted small">Analisar a mobilidade elétrica em Washington, com foco em autonomia, fabricantes e contexto de mercado.</p>
+              <div class="fw-bold small border-top pt-2">Uso previsto: análise agregada, não identificação de pessoas.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card h-100">
+              <i class="bi bi-check2-circle fs-3 text-secondary mb-2 d-block" aria-hidden="true"></i>
+              <h3 class="h5 fw-bold">Adequação</h3>
+              <p class="text-muted small">Relacionar cada informação à pergunta de análise. Autonomia e tipo de veículo apoiam o comparativo BEV e PHEV.</p>
+              <div class="fw-bold small border-top pt-2">Publicar apenas o que for compatível com a finalidade.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-card h-100">
+              <i class="bi bi-funnel fs-3 text-secondary mb-2 d-block" aria-hidden="true"></i>
+              <h3 class="h5 fw-bold">Necessidade</h3>
+              <p class="text-muted small">Minimizar os campos tratados. Identificadores e localização precisa não são necessários para esta visualização.</p>
+              <div class="fw-bold small border-top pt-2">Preferir agregação e excluir detalhes que possam reidentificar.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-card mb-4">
+          <div class="section-tag mb-1">01 / REVISÃO DOS CAMPOS</div>
+          <h2 class="h5 fw-bold">Classificação de risco</h2>
+          <p class="text-muted small mb-3">Classificação qualitativa proposta pelo grupo, considerando a possibilidade de vincular registros a veículos, pessoas ou locais. Estes níveis não são categorias oficiais da LGPD. O risco depende do contexto e dos cruzamentos disponíveis.</p>
+
+          <div class="table-responsive" role="region" aria-label="Avaliação de risco dos campos da base" tabindex="0">
+            <table class="table align-middle">
+              <caption class="visually-hidden">Avaliação qualitativa do grupo sobre campos da base e cuidados recomendados para publicação.</caption>
+              <thead class="table-light small">
+                <tr>
+                  <th scope="col">Campo</th>
+                  <th scope="col">Risco</th>
+                  <th scope="col">Tratamento recomendado</th>
+                </tr>
+              </thead>
+              <tbody class="small">
+                <tr>
+                  <th scope="row" class="fw-bold">VIN (1–10)</th>
+                  <td><span class="badge badge-risk-medio"><i class="bi bi-shield-exclamation me-1" aria-hidden="true"></i>Médio</span></td>
+                  <td>Omitir o VIN parcial das visualizações. Sua combinação com outros campos pode facilitar a vinculação de registros.</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="fw-bold">Localização do veículo (coordenadas)</th>
+                  <td><span class="badge badge-risk-critico"><i class="bi bi-shield-x me-1" aria-hidden="true"></i>Crítico</span></td>
+                  <td>Não publicar coordenadas precisas. Preferir resultados por condado ou outra região suficientemente agregada.</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="fw-bold">Postal Code (código postal)</th>
+                  <td><span class="badge badge-risk-alto"><i class="bi bi-exclamation-triangle me-1" aria-hidden="true"></i>Alto</span></td>
+                  <td>Generalizar o recorte geográfico e revisar grupos com poucos registros.</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="fw-bold">DOL Vehicle ID</th>
+                  <td><span class="badge badge-risk-alto"><i class="bi bi-exclamation-triangle me-1" aria-hidden="true"></i>Alto</span></td>
+                  <td>Excluir identificador individual das visualizações e exportações.</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="fw-bold">Fabricante / modelo / autonomia</th>
+                  <td><span class="badge badge-risk-baixo"><i class="bi bi-shield-check me-1" aria-hidden="true"></i>Baixo</span></td>
+                  <td>Apresentar em agregado; reavaliar combinações raras antes da publicação.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="small text-muted">Os níveis aparecem em texto e com ícones, além das cores. Mesmo os campos classificados como risco baixo exigem revisão das combinações publicadas.</div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="custom-card h-100">
+              <h2 class="h5 fw-bold">Antes de publicar</h2>
+              <p class="text-muted small mb-2">Revisar combinações raras, detalhamento geográfico e risco de reidentificação. Publicar tabelas de apoio agregadas, sem identificadores individuais nem coordenadas precisas.</p>
+              <div class="fw-bold small">Agregação não substitui uma avaliação de privacidade.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="custom-card h-100">
+              <h2 class="h5 fw-bold">Proteção por padrão</h2>
+              <p class="text-muted small mb-2">A versão atual apresenta resultados previamente calculados e não possui formulário de cadastro. Se o projeto passar a coletar dados pessoais ou usar um back-end, será necessário avaliar finalidade, base legal, acesso, retenção e medidas de segurança adequadas.</p>
+              <div class="small text-muted">Recomendações para evolução do projeto. Não representam controles já implementados nem parecer jurídico.</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="mt-4" aria-labelledby="referencia-lgpd">
+          <h2 id="referencia-lgpd" class="h5 fw-bold">Referência utilizada</h2>
+          <p class="small mb-0">
+            BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais.
+            <a href="https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-normaatualizada-pl.html">Consultar o texto atualizado da LGPD na Câmara dos Deputados</a>.
+          </p>
+        </section>
+
+  </main>
+
+  <footer class="bg-white border-top py-3 px-4 mt-auto">
+    <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center small text-muted">
+      <div>
+        <strong>PULSO EV</strong> · Inteligência para a mobilidade elétrica <br>
+        <span>Fonte: <strong>Washington State Department of Licensing.</strong> Recorte: Washington, anos de modelo de 2010 a 2025.</span>
+      </div>
+      <div class="mt-2 mt-md-0">
+        <span class="me-3">Meta de acessibilidade: WCAG 2.2 AA</span>
+        <span>Segurança e LGPD: somente dados agregados nesta visão</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
